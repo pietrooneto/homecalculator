@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore di valore</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Calcola il valore della casa</h1>
+    <form action="/calcola" method="POST">
+        <label for="metri_quadri">Metri quadri:</label>
+        <input type="number" name="metri_quadri" required>
+
+        <label for="prezzo_mq">Prezzo per metro quadro:</label>
+        <input type="number" name="prezzo_mq" required>
+
+        <label for="stato">Stato:</label>
+        <select name="stato">
+            <option value="Nuovo">Nuovo</option>
+            <option value="Da ristrutturare">Da ristrutturare</option>
+        </select>
+
+        <label for="vista">Vista Mare:</label>
+        <select name="vista">
+            <option value="Nessuna">Nessuna</option>
+            <option value="Parziale">Parziale</option>
+            <option value="Completa">Completa</option>
+        </select>
+
+        <label for="parcheggio">Parcheggio:</label>
+        <select name="parcheggio">
+            <option value="Nessuno">Nessuno</option>
+            <option value="Riservato">Riservato</option>
+            <option value="Box">Box</option>
+        </select>
+
+        <button type="submit">Calcola</button>
+    </form>
+</body>
+</html>
