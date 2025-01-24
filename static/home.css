@@ -1,0 +1,106 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body con un font moderno e uno sfondo chiaro */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 2rem;
+    padding: 0;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1rem; /* Impostiamo la base a 16px, che equivale a 1rem */
+}
+
+header{
+    height: 8rem;
+}
+header img{
+    width: 4rem;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* Intestazione */
+h1 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem; /* 32px */
+    font-weight: 600;
+}
+
+/* Form container */
+form {
+    background-color: #fff;
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1); /* 4px 12px */
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+/* Etichette */
+label {
+    font-size: 1rem; /* 16px */
+    margin-bottom: 0.75rem; /* 12px */
+    font-weight: 500;
+    color: #555;
+}
+
+/* Input e Select */
+input, select {
+    font-size: 1rem; /* 16px */
+    padding: 0.625rem; /* 10px */
+    margin-bottom: 1.25rem; /* 20px */
+    border: 1px solid #ccc;
+    border-radius: 0.3125rem; /* 5px */
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Focus sugli input */
+input:focus, select:focus {
+    border-color: #007BFF;
+}
+
+/* Bottone */
+button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1rem; /* 16px */
+    padding: 0.75rem; /* 12px */
+    border: none;
+    border-radius: 0.3125rem; /* 5px */
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* Hover su bottone */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsività */
+@media (max-width: 30rem) { /* 480px */
+    form {
+        padding: 1.25rem; /* 20px */
+        width: 90%;
+    }
+
+    input, select, button {
+        max-width: 100%;
+    }
+}

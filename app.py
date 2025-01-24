@@ -16,12 +16,15 @@ def calcola():
     stato = request.form['stato']
     vista_mare = request.form['vista']
     parcheggio = request.form['parcheggio']
+    giardino = request.form['giardino']
 
     #calcolo i valori
     valore = mq * prezzo_mq
 
     if stato == 'Nuovo':
-        valore *= 1.1
+        valore *= 1.2
+    elif stato == 'Medio':
+        valore *= 1.0
     elif stato == 'Da ristrutturare':
         valore *= 0.8
 
@@ -35,11 +38,17 @@ def calcola():
     elif parcheggio == 'Box':
         valore *= 1.15
 
+    if giardino == 'Presente':
+        valore *= 1.08
+
+    #arrotondo il valore sulla linea delle centinaia
+    valore = round(valore / 1000) * 1000
+
     #mando il valore alla pagina risultato
     return render_template('result.html', valore=valore)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5001)
 
 
 
